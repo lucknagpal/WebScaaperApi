@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+     <UseWpf>true</UseWpf>
+    <UseWindowsForms>true</UseWindowsForms>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ScrapperController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+      <Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="{d37e2a3e-8545-3a39-9f4f-31827c9124ab}">
+      <Guid>d37e2a3e-8545-3a39-9f4f-31827c9124ab</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreHtmlToImage" Version="1.0.6" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0-preview1.19506.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0-preview1.19506.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0-preview1.19506.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0-preview1-19509-03" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.2" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Users\Techbit-20\Downloads\System.Windows.Forms\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+</Project>
